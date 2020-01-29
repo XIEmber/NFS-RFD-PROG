@@ -1,11 +1,9 @@
 <?php
 
-class Voiture
+class Voiture extends Vehicule
 {
   public $nbrRoues;
   private $nbrPlaces = 5;
-  public $masse;
-  public $vitesse = 0;
   public $couleur;
 
   public function __construct(float $m, string $c)
@@ -23,18 +21,12 @@ class Voiture
   {
     $this->nbrPlaces = $p;
   }
-
-  public function calculerEnergieCinetique()
-  {
-    return 0.5 * $this->masse * $this->vitesse ** 2;
-  }
-
   public function afficherMessageDebile()
   {
     echo "Je roule en caisse";
 }
   public function __destruct()
   {
-    echo"<h1>Je suis cassé</h1>";
+    echo"<h1>Oh oui détruit moi</h1>";
   }
 }

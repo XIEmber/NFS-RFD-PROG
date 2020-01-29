@@ -1,10 +1,20 @@
 <?php
+require_once './classes/Vehicule.php';
 require_once './classes/Voiture.php';
+require_once './classes/Moto.php';
 
 $voiture1 = new Voiture(1000,'rouge');
 $voiture2 = new Voiture(2000,'vert pomme');
 $voiture1->vitesse = 30;
-$voiture1->vitesse = 40;
+$voiture2->vitesse = 40;
+
+$moto = new Moto();
+$moto->masse = 200;
+$moto->vitesse = 48;
+echo $moto->calculerForceCentrifuge(50);
+echo "<br/>";
+echo $moto->calculerEnergieCinetique();
+
 
 echo $voiture1->getNbrPlaces();
 
