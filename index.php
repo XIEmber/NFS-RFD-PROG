@@ -1,9 +1,9 @@
 <?php
 require_once './classes/Voiture.php';
 
-$voiture1 = new Voiture();
+$voiture1 = new Voiture(1000,'rouge');
 
-//$voiture->masse=1000;//
 
 $voiture1->afficherMessageDebile();
-?>
+
+var_dump($voiture1);
